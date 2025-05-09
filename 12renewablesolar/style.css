@@ -1,0 +1,12 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4fff4;
+}
+
+h1, h2 {
+  font-weight: bold;
+}
+
+.card-title {
+  color: #198754;
+}

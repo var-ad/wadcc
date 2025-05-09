@@ -1,0 +1,13 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+.card img {
+  height: 250px;
+  object-fit: cover;
+}

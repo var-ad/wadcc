@@ -1,0 +1,5 @@
+mkdir my-app
+cd my-app
+npm init -y
+node index.js 
+

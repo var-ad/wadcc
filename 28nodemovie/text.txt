@@ -1,0 +1,20 @@
+mkdir my-app
+cd my-app
+npm init -y
+node index.js 
+
+
+express 
+const express = require('express');
+const path = require('path');
+const app = express();
+const port = 3000;
+
+app.use(express.static(path.join(__dirname, 'public'))); // Serves static files like CSS, JS
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname,  'index.html')); // Sends an HTML file
+
+app.listen(port, () => {
+    console.log(`Movie ticket booking app listening at http://localhost:${port}`);
+});

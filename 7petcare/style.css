@@ -1,0 +1,11 @@
+body {
+  background-color: #fffdf0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}

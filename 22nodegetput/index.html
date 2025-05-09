@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Management</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h1>Student Management</h1>
+
+  <!-- Add Student -->
+  <h2>Add Student</h2>
+  <form id="addForm">
+    Name: <input type="text" id="addName" required><br>
+    Password: <input type="password" id="addPassword" required><br>
+    <button type="submit">Add Student</button>
+  </form>
+
+  <!-- Update Student -->
+  <h2>Update Student</h2>
+  <form id="updateForm">
+    ID: <input type="text" id="updateId" required><br>
+    New Name: <input type="text" id="updateName"><br>
+    New Password: <input type="password" id="updatePassword"><br>
+    <button type="submit">Update Student</button>
+  </form>
+
+  <!-- Delete Student -->
+  <h2>Delete Student</h2>
+  <form id="deleteForm">
+    ID: <input type="text" id="deleteId" required><br>
+    <button type="submit">Delete Student</button>
+  </form>
+
+  <!-- Get All Students -->
+  <h2>All Students</h2>
+  <button onclick="fetchStudents()">Refresh List</button>
+  <ul id="studentList"></ul>
+
+  <script>
+    // Add Student
+    document.getElementById('addForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      await fetch('/students', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: document.getElementById('addName').value,
+          password: document.getElementById('addPassword').value
+        })
+      });
+      fetchStudents();
+    });
+
+    // Update Student
+    document.getElementById('updateForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      await fetch(`/students/${document.getElementById('updateId').value}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: document.getElementById('updateName').value,
+          password: document.getElementById('updatePassword').value
+        })
+      });
+      fetchStudents();
+    });
+
+    // Delete Student
+    document.getElementById('deleteForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      await fetch(`/students/${document.getElementById('deleteId').value}`, {
+        method: 'DELETE'
+      });
+      fetchStudents();
+    });
+
+    // Fetch all students
+    async function fetchStudents() {
+      const res = await fetch('/students');
+      const students = await res.json();
+      const list = document.getElementById('studentList');
+      list.innerHTML = '';
+      students.forEach(s => {
+        const item = document.createElement('li');
+        item.textContent = `ID: ${s._id}, Name: ${s.name}`;
+        list.appendChild(item);
+      });
+    }
+
+    // Initial load
+    fetchStudents();
+  </script>
+</body>
+</html>

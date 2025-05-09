@@ -1,0 +1,13 @@
+body {
+  background-color: #f0f8ff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+#patientForm {
+  max-width: 500px;
+  margin: auto;
+}

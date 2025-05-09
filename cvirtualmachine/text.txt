@@ -1,0 +1,12 @@
+1. virtualbox
+2. ubuntu vmdk image
+3. create two vm box's with ubuntu 64bit
+4. use an existing virtual disk file
+5. files/tools/network manager/nat network/ - create new nat network 
+6. change ip  
+7. right click -> settings -> network -> choose nat network for both vm  
+8. run both. username vagrant pass vagrant  
+9. optional sudo apt install net-tools for ifconfig
+10. scp (secure copy protocol) 
+11. touch nano ls cat
+12. scp transfer.txt vagrant@172.168.2.5:/home/vagrant 

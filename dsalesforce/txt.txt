@@ -1,0 +1,21 @@
+lightning usage
+run salesforce optimizer 
+object manager 
+create 
+custom object 
+comment 
+comments 
+allow reports 
+search tabs 
+custom object - new
+app manager 
+new lightining app  
+
+
+
+settings - setup 
+object manager 
+comments 
+new 
+lookup rel 
+always require 

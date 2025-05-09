@@ -1,0 +1,26 @@
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/your-username/your-repo-name.git
+git push -u origin main 
+
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+
+echo "Hello from main" > file.txt
+git add file.txt
+git commit -m "Initial commit from main"
+git push origin main  # Push to GitHub
+
+git checkout -b feature-1
+
+echo "This is feature 1" >> file.txt
+git add file.txt
+git commit -m "Added feature 1 content"
+git push origin feature-1
+
+git checkout main
+git pull origin main  # Get latest changes
+git merge feature-1   # Merge feature-1 into main
+
+git push origin main

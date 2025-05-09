@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4 text-primary">Real Estate Listings</h1>
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="images/house1.jpg" class="card-img-top" alt="House 1">
+          <div class="card-body">
+            <h5 class="card-title">Luxury Villa</h5>
+            <p class="card-text">🏠 123 Palm Street, Beverly Hills, CA</p>
+            <p class="text-success fw-bold">$2,500,000</p>
+            <button class="btn btn-outline-primary w-100" onclick="contactAlert('Luxury Villa')">Contact Us</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="images/house2.jpg" class="card-img-top" alt="House 2">
+          <div class="card-body">
+            <h5 class="card-title">Modern Apartment</h5>
+            <p class="card-text">🏢 45 Skyline Blvd, New York, NY</p>
+            <p class="text-success fw-bold">$850,000</p>
+            <button class="btn btn-outline-primary w-100" onclick="contactAlert('Modern Apartment')">Contact Us</button>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow">
+          <img src="images/house3.jpg" class="card-img-top" alt="House 3">
+          <div class="card-body">
+            <h5 class="card-title">Beach House</h5>
+            <p class="card-text">🌊 88 Ocean Drive, Miami, FL</p>
+            <p class="text-success fw-bold">$1,200,000</p>
+            <button class="btn btn-outline-primary w-100" onclick="contactAlert('Beach House')">Contact Us</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function contactAlert(propertyName) {
+      alert('Thank you for your interest in ' + propertyName + '. We will contact you soon!');
+    }
+  </script>
+</body>
+</html>

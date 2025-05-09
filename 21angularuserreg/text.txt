@@ -1,0 +1,7 @@
+ng new user-auth-app
+cd user-auth-app
+ng generate component register
+ng generate component login
+ng generate component profile
+ng generate service auth
+ng generate module app-routing --flat --module=app
